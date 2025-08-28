@@ -1,0 +1,161 @@
+/* 메가커피 메인색상, 글자색상, 글자 기본크기 */
+:root {
+    --maincolor: #fdd000;
+    --maintextcolor: #1c1c1b;
+}
+
+.inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    /* background: rgba(255, 0, 0, 0.3) */
+}
+
+header {
+    background: #fff;
+    box-shadow: 0 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+header .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 200px;
+    /* padding: 25px 0 30px; */
+}
+
+.logo img {
+    width: 100%
+}
+
+.main-menu {
+    display: flex;
+}
+
+.main-menu>li {
+    text-align: center;
+    position: relative;
+
+}
+
+.main-menu>li:hover {
+    background: var(--maincolor);
+}
+
+.main-menu>li>a {
+    display: block;
+    width: 115px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 100px;
+}
+
+.main-menu>li:hover .depth1{
+    background: var(--maincolor);    
+}
+
+/* depth1 서버메뉴 숨기기 */
+.depth1 {
+    display: none;
+    position: absolute;
+    line-height: 2;
+    padding:30px 0 0px;
+    /* background: rgba(0,255, 0, 0.3); */
+    width: 100%;
+    height: 200px;
+    /* 패딩을 포함하여 220이 되라고 명령 */
+    box-sizing: border-box;
+
+
+}
+
+.main-menu:hover .depth1 {
+    display: block;
+    /* position: absolute;
+    line-height: 2;
+    padding-top: 50px; */
+}
+
+.sns-list {
+    display: flex;
+    gap: 10px;
+}
+
+/* .sns-list>li {} */
+
+.sns-list>li>a {
+    display: flex;
+    width: 39px;
+    height: 39px;
+    border: 2px solid var(--maintextcolor);
+    border-radius: 50px;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    /* 이미지를 위아래 좌우 가운데를 보낼땐 디스플레이 플렉스를 활용
+    좌우는 저스티파이콘텐츠 센터, 위아래는 얼리인아이템 센터 */
+}
+.sns-list>li>a:hover{
+    background: var(--maincolor);
+    border-color:transparent;
+}
+main {
+    height: 500px;
+}
+
+/* footer{ 
+} */
+.footer-top{
+    background: var(--maincolor);
+    padding: 20px 0;    
+}
+.util-menu{
+    display: flex;
+    gap:20px;
+}
+.util-menu>li>a{
+    font-weight: 600;
+}
+.util-menu>li>a:hover{
+    text-decoration: underline;
+}
+.footer-bottom{
+    background: var(--maintextcolor);
+    padding: 60px 0;
+    color: #aaa;
+}
+.footer-bottom>.inner{
+    display: flex;
+    justify-content: space-between;
+}
+.footer-bottom>.inner>.footer-bottom-left>div{
+    display: flex;    
+    gap:20px;
+    align-items: center;
+}
+.footer-bottom-left>div>img{
+    width:200px;
+}
+
+.footer-bottom-left>address{
+    margin-top:20px;
+    line-height: 2;
+    font-size: 14px;
+}
+.footer-bottom-left>address strong{
+    /* font-size: 16px; */
+    color: #fff;
+}
+.sitemap{
+    display: flex;
+    gap:30px;
+    
+    
+}
+.sitemap .depth1{
+    display: block;
+    position: static;
+    /* 포지션을 적용하지 않은 상태는 static */
+}    
